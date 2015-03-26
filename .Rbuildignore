@@ -1,0 +1,5 @@
+.git
+.gitignore
+.Rhistory
+*.o
+*.so

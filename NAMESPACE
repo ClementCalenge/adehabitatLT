@@ -1,0 +1,23 @@
+useDynLib(adehabitatLT)
+
+import(adehabitatMA,ade4,sp,methods,CircStats)
+
+exportPattern("^[^\\.]")
+
+S3method("[", ltraj)
+S3method("[<-", ltraj)
+S3method(summary, ltraj)
+S3method(print, ltraj)
+S3method(c, ltraj)
+S3method(hist, ltraj)
+S3method(print, modpartltraj)
+S3method(print, partltraj)
+S3method(plot, partltraj)
+S3method(plot, fipati)
+S3method(plot, ltraj)
+S3method(qqchi, default)
+S3method(qqchi, ltraj)
+S3method(qqnorm, ltraj)
+S3method(wawotest, default)
+S3method(wawotest, ltraj)
+
