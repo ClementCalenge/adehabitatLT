@@ -25,7 +25,8 @@
 \usage{
 as.ltraj(xy, date, id, burst = id, typeII = TRUE,
          slsp = c("remove", "missing"),
-         infolocs = data.frame(pkey = paste(id, date, sep=".")))
+         infolocs = data.frame(pkey = paste(id, date, sep="."),
+                               row.names=row.names(xy)))
 \method{print}{ltraj}(x, \dots)
 \method{summary}{ltraj}(object, \dots)
 rec(x, slsp = c("remove", "missing"))

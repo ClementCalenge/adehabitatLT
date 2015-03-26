@@ -1,6 +1,7 @@
 as.ltraj <- function(xy, date=NULL, id, burst=id, typeII = TRUE,
                      slsp =  c("remove", "missing"),
-                     infolocs = data.frame(pkey = paste(id, date, sep=".")))
+                     infolocs = data.frame(pkey = paste(id, date, sep="."),
+                                           row.names=row.names(xy)))
 {
     ## Various verifications
     if (typeII) {
@@ -48,7 +49,7 @@ as.ltraj <- function(xy, date=NULL, id, burst=id, typeII = TRUE,
 
     x <- xy[,1]
     y <- xy[,2]
-    res <- split(data.frame(x=x,y=y, date=date), burst)
+    res <- split(data.frame(x=x,y=y, date=date, row.names=row.names(xy)), burst)
     liid <- split(id, burst)
     if (!is.null(infolocs))
         linfol <- split(infolocs, burst)
@@ -68,7 +69,7 @@ as.ltraj <- function(xy, date=NULL, id, burst=id, typeII = TRUE,
     ## Unique dates for a given id?
     x <- xy[,1]
     y <- xy[,2]
-    resbb <- split(data.frame(x=x,y=y, date=date), id1)
+    resbb <- split(data.frame(x=x,y=y, date=date, row.names=row.names(xy)), id1)
     rr <- any(unlist(lapply(resbb,
                             function(x) (length(unique(x$date))!=length(x$date)))))
     if (rr)

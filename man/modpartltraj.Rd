@@ -5,7 +5,7 @@
 \alias{print.partltraj}
 \alias{bestpartmod}
 \alias{plot.partltraj}
-\title{Segmentation of a trajectory based on Markov models (STILL UNDER RESEARCH!!)}
+\title{Segmentation of a trajectory based on Markov models}
 \description{
   
   These functions partition a trajectory into several segments
