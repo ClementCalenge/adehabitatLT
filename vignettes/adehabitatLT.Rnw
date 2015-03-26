@@ -18,7 +18,7 @@ the {\tt adehabitatLT} Package }
   Office national de la chasse et de la faune
   sauvage\\
   Saint Benoist -- 78610 Auffargis -- France.}
-\date{April 2011}
+\date{March 2015}
 
 \begin{document}
 
@@ -2053,13 +2053,12 @@ points(tr1[tr1[[1]]==3,], col="red")
 The red points indicate the pixels traversed by the third step.
 These results can be used to identify the habitat characteristics of
 each step. For example, we may calculate the mean elevation for each
-step. To proceed, we use the function \texttt{overlay} of the package
+step. To proceed, we use the function \texttt{over} of the package
 sp.
 
 <<label=jklmmre,echo=FALSE,fig=FALSE,eval=FALSE>>=
-ov <- overlay(puechabonsp$map, tr1)
-mel <- puechabonsp$map[ov,]
-mo <- tapply(mel[[1]], tr1[[1]], mean)
+ov <- over(tr1, puechabonsp$map)
+mo <- tapply(ov[[1]], tr1[[1]], mean)
 plot(mo, ty="l")
 @
 
@@ -2090,14 +2089,11 @@ val <- lapply(1:length(ii), function(i) {
     ## get the rasterized trajectory
     tr <- ii[[i]]
 
-    ## overlay with the map
-    ov <- overlay(puechabonsp$map, tr)
-
-    ## get the pixels of the map
-    mel <- puechabonsp$map[ov,]
+    ## over with the map
+    ov <- over(tr, puechabonsp$map)
 
     ## calculate the mean elevation
-    mo <- tapply(mel[[1]], tr[[1]], mean)
+    mo <- tapply(ov[[1]], tr[[1]], mean)
 
     ## prepare the output
     elev <- rep(NA, nrow(puechcirc[[i]]))
@@ -2113,6 +2109,7 @@ val <- lapply(1:length(ii), function(i) {
 
     return(df)
 })
+
 @
 
 \noindent Then, we define the \texttt{infolocs} attribute:

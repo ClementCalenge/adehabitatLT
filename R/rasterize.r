@@ -4,7 +4,7 @@ rasterize.ltraj <- function(ltr, map)
         stop("ltr should be of class ltraj")
     if (!inherits(map, "SpatialPixels"))
         stop("map should inherit the class SpatialPixels")
-    ltr <- na.omit(ltr)
+#    ltr <- na.omit(ltr)
     pa <- gridparameters(map)
     pfs <- proj4string(map)
 
