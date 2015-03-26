@@ -49,7 +49,7 @@
     dsp <- substring(match.arg(display), 1, 1)
     if (dsp == "g")
         dsp <- switch(.Platform$OS.type, windows = "w", "t")
-    if (dsp == "t" && !require(tkrplot))
+    if (dsp == "t" && !requireNamespace("tkrplot", quietly = TRUE))
         stop("'tkrplot' package needed\n")
 
     if (dsp == "t")
@@ -513,4 +513,3 @@
                        tcltk::tkbind(img, "<Button-3>", mm.t2)
                        tcltk::tkwait.window(tt)})
 }
-
