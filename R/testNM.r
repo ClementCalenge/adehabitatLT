@@ -516,7 +516,7 @@ NMs.randomCs <- function(ltraj, Cs=NULL, rDistCs=TRUE, rAngleCs=TRUE,
 
 
 
-## On définit une liste des modèles nuls précédents
+## We define a list of null models
 NMs2NMm <- function(NMs, treatment.func=NULL,
                     treatment.par=NULL, constraint.func=NULL,
                     constraint.par=NULL, nrep=999)

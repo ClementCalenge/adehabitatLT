@@ -203,8 +203,6 @@ as.ltraj <- function(xy, date=NULL, id, burst=id, typeII = TRUE,
 }
 
 
-## Attention au contrôle de cohérence!! à vérifier
-## ... ou à benner!
 "[<-.ltraj" <- function(x, i, id, burst, value)
   {
     if (!inherits(x, "ltraj"))
