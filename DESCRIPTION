@@ -1,6 +1,6 @@
 Package: adehabitatLT
-Version: 0.3.18
-Date: 2015-03-26
+Version: 0.3.19
+Date: 2015-03-28
 Depends: R (>= 2.10.0), sp, methods, ade4, adehabitatMA, CircStats, stats
 Suggests: maptools, tkrplot, MASS
 Title: Analysis of Animal Movements
