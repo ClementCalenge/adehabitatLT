@@ -3,6 +3,7 @@ Version: 0.3.19
 Date: 2015-03-28
 Depends: R (>= 2.10.0), sp, methods, ade4, adehabitatMA, CircStats, stats
 Suggests: maptools, tkrplot, MASS
+Imports: graphics, grDevices, utils
 Title: Analysis of Animal Movements
 Author: Clement Calenge, contributions from Stephane Dray and Manuela Royer
 Maintainer: Clement Calenge <clement.calenge@oncfs.gouv.fr>

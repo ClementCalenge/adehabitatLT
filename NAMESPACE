@@ -1,6 +1,9 @@
 useDynLib(adehabitatLT)
 
 import(adehabitatMA,ade4,sp,methods,CircStats,stats)
+importFrom("graphics", "abline", "box", "hist", "image", "lines", "par", "points", "polygon", "title")
+importFrom("grDevices", "getGraphicsEvent", "gray", "grey", "n2mfrow")
+importFrom("utils", "select.list")
 
 exportPattern("^[^\\.]")
 
