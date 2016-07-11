@@ -21,7 +21,6 @@ as.ltraj <- function(xy, date=NULL, id, burst=id, typeII = TRUE,
             stop("infolocs should have the same number of rows as xy")
     }
 
-
     ## length of id
     if (length(id)==1)
         id <- factor(rep(as.character(id), nrow(xy)))

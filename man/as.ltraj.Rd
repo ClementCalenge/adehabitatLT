@@ -162,7 +162,7 @@ rec(x, slsp = c("remove", "missing"))
   \code{removeinfo} can be used to remove this attribute.  Note also
   that the data.frames in the list infolocs should have the same
   row.names as the corresponding elements in the object of class
-  \code{"ltraj"}. 
+  \code{"ltraj"}.
 }
 \value{
   \code{summary.ltraj} returns a data frame.\cr
