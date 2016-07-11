@@ -323,7 +323,7 @@ object, as then \texttt{as.POSIXct} to convert it into the class
 <<>>=
 da <- as.character(locs$Date)
 head(da)
-da <- as.POSIXct(strptime(as.character(locs$Date),"%y%m%d"))
+da <- as.POSIXct(strptime(as.character(locs$Date),"%y%m%d", tz="Europe/Paris"))
 @
 
 We can then create an object of class \texttt{ltraj} to store the wild
@@ -607,7 +607,7 @@ regular trajectory. To proceed, we will use the function
 \texttt{setNA}. We have to define a reference date:
 
 <<>>=
-refda <- strptime("00:00", "%H:%M")
+refda <- strptime("00:00", "%H:%M", tz="Europe/Paris")
 refda
 @
 
@@ -666,7 +666,7 @@ place the missing values, as in the section \ref{sec:NA}. We define a
 reference date and place the missing values:
 
 <<>>=
-refda <- strptime("2003-06-01 00:00", "%Y-%m-%d %H:%M")
+refda <- strptime("2003-06-01 00:00", "%Y-%m-%d %H:%M", tz="Europe/Paris")
 ib2 <- setNA(ibexraw, refda, 4, units = "hour")
 ib2
 @
