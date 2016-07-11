@@ -104,7 +104,7 @@ plotltr(ibexraw, "dt/3600")
 ## missing data
 
 ## The reference date: the hour should be exact (i.e. minutes=0):
-refda <- strptime("00:00", "\%H:\%M")
+refda <- strptime("00:00", "\%H:\%M", tz="Europe/Paris")
 refda
 
 ## Set the missing values

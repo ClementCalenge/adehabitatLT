@@ -87,7 +87,8 @@ ltr <- albatross[1]
 plotltr(ltr)
 
 ## focus on the first period
-ltr <- gdltraj(ltr, as.POSIXct("2001-12-15"), as.POSIXct("2003-01-10"))
+ltr <- gdltraj(ltr, as.POSIXct("2001-12-15", tz="UTC"),
+               as.POSIXct("2003-01-10", tz="UTC"))
 
 plot(ltr)
 ## We identify places that seem to be a patch and, with locator,

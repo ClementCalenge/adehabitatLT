@@ -91,7 +91,7 @@ data(bear)
 ## 21H00 and 22H00 (i.e. correspond to the relocation taken at 21H30)
 
 foo <- function(date) {
-     da <- as.POSIXlt(date, "GMT")
+     da <- as.POSIXlt(date, "UTC")
      ho <- da$hour + da$min/60
      return(ho>21&ho<22)
 }

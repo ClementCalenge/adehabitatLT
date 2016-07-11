@@ -43,7 +43,7 @@ plot(toto, perani = FALSE)
 ## Gets all relocations collected between the 15th
 ## and the 25th august 1993
 lim <- as.POSIXct(strptime(c("15/08/1993", "25/08/1993"),
-                  "\%d/\%m/\%Y"))
+                  "\%d/\%m/\%Y", tz="Europe/Paris"))
 tutu <- gdltraj(puechcirc, min = lim[1],
                 max = lim[2], type="POSIXct")
 plot(tutu, perani = FALSE)

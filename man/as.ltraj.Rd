@@ -242,7 +242,7 @@ head(litrI[[1]])
 
 ### Conversion of the date to the format POSIX
 da <- as.character(df$Date)
-da <- as.POSIXct(strptime(as.character(df$Date),"\%y\%m\%d"))
+da <- as.POSIXct(strptime(as.character(df$Date),"\%y\%m\%d", tz="Europe/Paris"))
 
 
 ### Creation of an object of class "ltraj", with for 
