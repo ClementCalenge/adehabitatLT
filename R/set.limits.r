@@ -56,6 +56,10 @@ set.limits <- function(ltraj, begin, dur, pattern,
     units <- match.arg(units)
     dur <- .convtime(dur, units)
 
+    tz1 <- .checktz(ltraj)
+    if (tz!=tz1)
+        stop("inconsistent time zones; please check the argument tz")
+
     res <- strsplit(pattern,"")[[1]]
     sep <- res[c(1,diff(as.numeric(res=="%")))==0][1]
     ordre <- unlist(lapply(split(res,cumsum(as.numeric(res=="%"))),

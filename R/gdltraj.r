@@ -11,6 +11,12 @@ gdltraj <- function(x, min, max,
 
     ## gets the traj within the boundaries
     if (type=="POSIXct") {
+        tz1 <- .checktz(x)
+        tz2 <- .ctzda(min)
+        tz3 <- .ctzda(max)
+        tz <- c(tz2,tz3)
+        if (any(tz!=tz1))
+            stop("non consistent time zones")
         x <- lapply(x, function(y) {
             infol <- attr(y, "infolocs")
             if (!is.null(infol))

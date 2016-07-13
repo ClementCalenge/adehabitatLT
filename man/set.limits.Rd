@@ -85,7 +85,7 @@ ibex
 ## define the time limits
 
 ib2 <- set.limits(ibex, begin="2003-06-01 00:00", dur=14,
-                  units="day", pattern="\%Y-\%m-\%d \%H:\%M")
+                  units="day", pattern="\%Y-\%m-\%d \%H:\%M", tz="Europe/Paris")
 ib2
 is.sd(ib2)
 

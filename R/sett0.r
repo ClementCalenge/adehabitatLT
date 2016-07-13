@@ -15,6 +15,10 @@ sett0 <- function(ltraj, date.ref, dt,
     }
     if (!inherits(date.ref,"POSIXct"))
         stop("date.ref should be of class \"POSIXct\"")
+    tz1 <- .checktz(ltraj)
+    tz2 <- .ctzda(date.ref)
+    if (tz1!=tz2)
+        stop("inconsistent time zones")
 
     units <- match.arg(units)
     dt <- .convtime(dt, units)

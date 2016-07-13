@@ -13,6 +13,10 @@ setNA <- function(ltraj, date.ref, dt, tol=dt/10,
         date.ref <- as.POSIXct(date.ref)
     if (!inherits(date.ref,"POSIXct"))
         stop("date.ref should be of class \"POSIXct\"")
+    tz1 <- .checktz(ltraj)
+    tz2 <- .ctzda(date.ref)
+    if (tz1!=tz2)
+        stop("inconsistent time zones")
 
     units <- match.arg(units)
     dt <- .convtime(dt, units)

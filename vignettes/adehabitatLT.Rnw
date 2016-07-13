@@ -742,7 +742,8 @@ required:
 
 <<>>=
 ib4 <- set.limits(ib3, begin = "2003-06-01 00:00",
-                  dur = 14, units = "day", pattern = "%Y-%m-%d %H:%M")
+                  dur = 14, units = "day", pattern = "%Y-%m-%d %H:%M",
+                  tz="Europe/Paris")
 ib4
 @
 
