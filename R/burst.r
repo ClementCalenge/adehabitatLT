@@ -9,6 +9,7 @@ burst <- function(ltraj)
 {
     if (!inherits(ltraj, "ltraj"))
         stop("ltraj should be of class \"ltraj\"")
+    p4s <- .checkp4(ltraj)
     res <- lapply(1:length(ltraj), function(i) {
         x <- ltraj[[i]]
         attr(x,"burst") <- value[i]
@@ -17,6 +18,7 @@ burst <- function(ltraj)
     class(res) <- c("ltraj","list")
     attr(res, "typeII") <- attr(ltraj, "typeII")
     attr(res, "regular") <- is.regular(res)
+    attr(res,"proj4string") <- p4s
     return(res)
 }##OK
 
@@ -32,6 +34,7 @@ id <- function(ltraj)
 {
     if (!inherits(ltraj, "ltraj"))
         stop("ltraj should be of class \"ltraj\"")
+    p4s <- .checkp4(ltraj)
     res <- lapply(1:length(ltraj), function(i) {
         x <- ltraj[[i]]
         attr(x,"id") <- value[i]
@@ -40,6 +43,7 @@ id <- function(ltraj)
     class(res) <- c("ltraj","list")
     attr(res, "typeII") <- attr(ltraj, "typeII")
     attr(res, "regular") <- is.regular(res)
+    attr(res,"proj4string") <- p4s
     return(res)
 }##OK
 

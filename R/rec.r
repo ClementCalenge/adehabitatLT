@@ -8,6 +8,7 @@ rec <- function(x, slsp=c("remove","missing"))
         stop("x should be of class \"ltraj\"")
 
     lif <- infolocs(x)
+    p4s <- .checkp4(x)
     if (!is.null(lif)) {
         for (i in 1:length(x)) {
             if (!all(row.names(x[[i]])%in%row.names(lif[[i]]))) {
@@ -29,11 +30,11 @@ rec <- function(x, slsp=c("remove","missing"))
             infol <- do.call("rbind", lif)
             al <- as.ltraj(xy=y[,c("x","y")], date=y$date,
                            id=y$id, burst=y$burst, slsp=slsp,
-                           typeII=TRUE, infolocs=infol)
+                           typeII=TRUE, infolocs=infol, proj4string=p4s)
         } else {
             al <- as.ltraj(xy=y[,c("x","y")], date=y$date,
                            id=y$id, burst=y$burst, slsp=slsp,
-                           typeII=TRUE, infolocs=lif)
+                           typeII=TRUE, infolocs=lif, proj4string=p4s)
         }
         return(al)
     } else {
@@ -43,11 +44,11 @@ rec <- function(x, slsp=c("remove","missing"))
             infol <- do.call("rbind", infolocs(x))
             al <- as.ltraj(xy=y[,c("x","y")], id=y$id,
                            burst=y$burst, slsp=slsp,
-                           typeII=FALSE, infolocs=infol)
+                           typeII=FALSE, infolocs=infol, proj4string=p4s)
         } else {
             al <- as.ltraj(xy=y[,c("x","y")], id=y$id,
                            burst=y$burst, slsp=slsp,
-                           typeII=FALSE)
+                           typeII=FALSE, proj4string=p4s)
         }
         return(al)
     }

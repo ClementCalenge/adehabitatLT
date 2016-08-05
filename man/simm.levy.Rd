@@ -6,7 +6,8 @@
 }
 \usage{
 simm.levy(date = 1:500, mu = 2, l0 = 1, x0 = c(0, 0),
-          id = "A1", burst = id, typeII = TRUE)
+          id = "A1", burst = id, typeII = TRUE,
+          proj4string=CRS())
 }
 \arguments{
   \item{date}{a vector indicating the date (in seconds) at which
@@ -24,6 +25,8 @@ simm.levy(date = 1:500, mu = 2, l0 = 1, x0 = c(0, 0),
   \item{typeII}{logical.  Whether the simulated trajectory should be of
     type II (\code{TRUE}, time recorded) or not (\code{FALSE}, time not
     recorded). See \code{help(ltraj)}.}
+  \item{proj4string}{a valid CRS object containing the projection
+    information (see \code{?CRS} from the package \code{sp}).}
 }
 \details{
   This function simulates a Levy flight with exponent \code{mu}.

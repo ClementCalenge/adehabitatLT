@@ -4,6 +4,11 @@ rasterize.ltraj <- function (ltr, map)
         stop("ltr should be of class ltraj")
     if (!inherits(map, "SpatialPixels"))
         stop("map should inherit the class SpatialPixels")
+    pfs1 <- .checkp4(ltr)
+    pfs2 <- attr(map, "proj4string")
+    if (!identical(pfs1, pfs2)) {
+        stop("different CRS in the two objects")
+    }
 
     pa <- gridparameters(map)
     pfs <- proj4string(map)

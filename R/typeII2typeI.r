@@ -8,6 +8,8 @@ typeII2typeI <- function(x)
     class(res) <- c("ltraj","list")
     attr(res, "typeII") <- FALSE
     attr(res, "regular") <- FALSE
+    attr(res, "proj4string") <- .checkp4(x)
+
     res <- rec(res)
     return(res)
 }

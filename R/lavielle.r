@@ -113,7 +113,7 @@ findpath <- function(lav, K, plotit=TRUE)
         }
         res <- do.call("c.ltraj", lapply(1:length(lipla), function(i) {
             y <- lipla[[i]]
-            ff <- dl(x[y[1]:y[2],])
+            ff <- dl(x[y[1]:y[2],], proj4string=.checkp4(ltraj))
             burst(ff) <- paste("Segment", i, sep=".")
             return(ff)
         }))
@@ -144,4 +144,3 @@ lavielle.ltraj <- function(x, Lmin, Kmax, ld = 1, which="dist",
     attr(lav, "typeseg") <- "ltraj"
     return(lav)
 }
-

@@ -10,7 +10,7 @@
 }
 \usage{
 ld(ltraj)
-dl(x)
+dl(x, proj4string=CRS())
 }
 \arguments{
   \item{ltraj}{
@@ -19,6 +19,9 @@ dl(x)
   \item{x}{
     an object of class \code{data.frame}, containing at least columns
     named \code{x,y,date}.
+  }
+  \item{proj4string}{
+    a valid CRS object containing the projection information.
   }
 }
 \details{

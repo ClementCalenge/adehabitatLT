@@ -1,6 +1,6 @@
 "simm.crw" <- function(date=1:100, h = 1, r = 0,
                        x0=c(0,0), id="A1", burst=id,
-                       typeII=TRUE)
+                       typeII=TRUE, proj4string=CRS())
 {
     if (typeII) {
         if (!inherits(date, "POSIXct")) {
@@ -23,7 +23,6 @@
     si=c(x0[2], x0[2]+cumsum(v*sin(ang)))
     co=c(x0[1], x0[1]+cumsum(v*cos(ang)))
     res <- as.ltraj(data.frame(co,si),date, id, burst,
-                    typeII=typeII)
+                    typeII=typeII, proj4string=proj4string)
     return(res)
 }
-

@@ -3,7 +3,7 @@ na.omit.ltraj <- function(object, ...)
 {
     if (!inherits(object, "ltraj"))
         stop("ltraj should be of class ltraj")
-
+    p4s <- .checkp4(object)
     info <- infolocs(object)
     for (i in 1:length(object)) {
         x <- object[[i]]
@@ -13,5 +13,7 @@ na.omit.ltraj <- function(object, ...)
     }
     if (!is.null(info))
         infolocs(object) <- info
-    return(rec(object))
+    res <- rec(object)
+    attr(res, "proj4string") <- p4s
+    return(res)
 }

@@ -1,5 +1,5 @@
 "simm.bb" <- function(date=1:100, begin = c(0,0),
-                      end=begin, id="A1", burst=id)
+                      end=begin, id="A1", burst=id, proj4string=CRS())
   {
       if (!inherits(date, "POSIXct")) {
           class(date) <- c("POSIXct", "POSIXt")
@@ -22,8 +22,8 @@
       }
       x <- rbind(x,end)
 
-      res <- as.ltraj(data.frame(x[,1],x[,2]),date, id, burst, typeII=TRUE)
+      res <- as.ltraj(data.frame(x[,1],x[,2]),date, id, burst, typeII=TRUE,
+                      proj4string=proj4string)
       return(res)
 
   }
-

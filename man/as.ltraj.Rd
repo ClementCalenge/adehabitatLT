@@ -26,7 +26,8 @@
 as.ltraj(xy, date, id, burst = id, typeII = TRUE,
          slsp = c("remove", "missing"),
          infolocs = data.frame(pkey = paste(id, date, sep="."),
-                               row.names=row.names(xy)))
+                               row.names=row.names(xy)),
+         proj4string = CRS())
 \method{print}{ltraj}(x, \dots)
 \method{summary}{ltraj}(object, \dots)
 rec(x, slsp = c("remove", "missing"))
@@ -52,6 +53,8 @@ rec(x, slsp = c("remove", "missing"))
   \item{infolocs}{if not \code{NULL}, a data frame containing
     additionnal information on the relocations (e.g., precision).  By
     default, a primary key is generated.}
+  \item{proj4string}{an object of class CRS storing the projection
+  information of the relocations.}
   \item{\dots}{For other functions, arguments to be passed to the generic
     functions \code{summary} and \code{print}}
 }
@@ -85,19 +88,22 @@ rec(x, slsp = c("remove", "missing"))
   \code{burst}. Note that the bursts should be unique: do not use the
   same burst id for bursts collected on different animals.
 
-  Two types of trajectories can be stored in objects of class \code{ltraj}:
-  trajectories of type I correspond to trajectories where the time of
-  relocations is not recorded.  It may be because it could not be noted
-  at the time of sampling (e.g. sampling of animals' tracks in the snow)
-  or because the analyst decided that he did not want to take it into
-  account, i.e. to study only its geometrical properties. In this case,
-  the variable \code{date} in each burst of the object contains a vector
-  of integer giving the order of the relocations in the trajectory (i.e. 1,
-  2, 3, ...). Trajectories of type II correspond to trajectories for which the
-  time is available for each relocation. It is stored as a vector of
-  class \code{POSIXct} in the column \code{date} of each burst of
-  relocations. The type of trajectory should be defined when the object of
-  class \code{ltraj} is defined, with the argument \code{typeII}.
+  Two types of trajectories can be stored in objects of class
+  \code{ltraj}: trajectories of type I correspond to trajectories where
+  the time of relocations is not recorded.  It may be because it could
+  not be noted at the time of sampling (e.g. sampling of animals' tracks
+  in the snow) or because the analyst decided that he did not want to
+  take it into account, i.e. to study only its geometrical
+  properties. In this case, the variable \code{date} in each burst of
+  the object contains a vector of integer giving the order of the
+  relocations in the trajectory (i.e. 1, 2, 3, ...). Trajectories of
+  type II correspond to trajectories for which the time is available for
+  each relocation. It is stored as a vector of class \code{POSIXct} in
+  the column \code{date} of each burst of relocations. The type of
+  trajectory should be defined when the object of class \code{ltraj} is
+  defined, with the argument \code{typeII}.  Note that the time zone of
+  dates in objects of type II should be the same for all bursts (this is
+  checked by the functions of adehabitatLT).
   
   Concerning trajectories of type II, in theory, it is expected that the
   time lag between two relocations is constant in all the bursts and all
@@ -163,6 +169,14 @@ rec(x, slsp = c("remove", "missing"))
   that the data.frames in the list infolocs should have the same
   row.names as the corresponding elements in the object of class
   \code{"ltraj"}.
+
+  Finally, note that an object of class \code{ltraj} *can* have an
+  attribute named \code{"proj4string"}, storing the projection
+  information of the object.  The package adehabitatLT does not manage
+  projection information, but this attribute can be useful when an
+  object of class \code{ltraj} is converted to other classes (in
+  particular spatial classes).  Note that this attribute can be NULL
+  (identical to a NA CRS).
 }
 \value{
   \code{summary.ltraj} returns a data frame.\cr

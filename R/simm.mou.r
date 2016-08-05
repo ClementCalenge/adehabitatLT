@@ -1,7 +1,7 @@
 "simm.mou" <-
 function(date=1:100, b = c(0,0), a = diag(0.5,2),
                      x0=b,  sigma=diag(2),
-                     id="A1", burst=id)
+                     id="A1", burst=id, proj4string=CRS())
   {
       if (!inherits(date, "POSIXct")) {
           class(date) <- c("POSIXct", "POSIXt")
@@ -31,7 +31,6 @@ function(date=1:100, b = c(0,0), a = diag(0.5,2),
       xtmp <- xtmp+dX
     }
 
-    res <- as.ltraj(data.frame(x[,1],x[,2]),date, id, burst, typeII=TRUE)
+    res <- as.ltraj(data.frame(x[,1],x[,2]),date, id, burst, typeII=TRUE, proj4string=proj4string)
     return(res)
   }
-

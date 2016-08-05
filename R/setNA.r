@@ -17,7 +17,7 @@ setNA <- function(ltraj, date.ref, dt, tol=dt/10,
     tz2 <- .ctzda(date.ref)
     if (tz1!=tz2)
         stop("inconsistent time zones")
-
+    p4s <- .checkp4(ltraj)
     units <- match.arg(units)
     dt <- .convtime(dt, units)
     tol <- .convtime(tol, units)
@@ -53,7 +53,7 @@ setNA <- function(ltraj, date.ref, dt, tol=dt/10,
          attr(da, "tzone") <- attr(ltraj[[1]]$date, "tzone")
          return(as.ltraj(data.frame(xx,yy), da, id=attr(x,"id"),
                          burst = attr(x,"burst"), typeII=TRUE,
-                         infolocs=infol, ...))
+                         infolocs=infol, proj4string=p4s,...))
      })
     return(do.call("c.ltraj",res))
 }

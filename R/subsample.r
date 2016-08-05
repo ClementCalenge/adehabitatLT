@@ -6,6 +6,7 @@ subsample <- function(ltraj, dt, nlo=1,
         stop("ltraj should be of class \"ltraj\"")
     if ((!is.regular(ltraj))&(attr(ltraj, "typeII")))
         stop("ltraj should be of type I or type II regular")
+    p4s <- .checkp4(ltraj)
     if (length(nlo)==1)
         nlo <- rep(nlo, length(ltraj))
     units <- match.arg(units)
@@ -29,6 +30,7 @@ subsample <- function(ltraj, dt, nlo=1,
     class(res) <- c("ltraj","list")
     attr(res,"typeII") <- attr(ltraj,"typeII")
     attr(res,"regular") <- is.regular(res)
+    attr(res, "proj4string") <- p4s
     res <- rec(res,...)
     return(res)
 }

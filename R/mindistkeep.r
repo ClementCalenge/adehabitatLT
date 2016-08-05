@@ -2,6 +2,7 @@ mindistkeep <- function(x, threshold)
 {
     if (!inherits(x,"ltraj"))
         stop("x should be of class 'ltraj'")
+    p4s <- .checkp4(x)
     foo <- function(y) {
         ul <- 1
         for (i in 2:nrow(y))
@@ -23,5 +24,6 @@ mindistkeep <- function(x, threshold)
     }
     res <- do.call("c.ltraj", lapply(x, foo))
     class(res) <- c("ltraj","list")
+    attr(res,"proj4string") <- p4s
     return(res)
 }

@@ -5,6 +5,7 @@ cutltraj <- function(ltraj, criterion, value.NA = FALSE,
     if (!inherits(ltraj, "ltraj"))
         stop("ltraj should be of class \"ltraj\"")
     infol <- infolocs(ltraj)
+    proj4string <- .checkp4(ltraj)
     res <- list()
     k <- 1
     for (i in 1:length(ltraj)) {
@@ -62,6 +63,7 @@ cutltraj <- function(ltraj, criterion, value.NA = FALSE,
         warning(paste("At least 3 relocations are needed for a burst\n",
                       sum(rrr[rrr<3]), "relocations have been deleted"))
     resb <- rec(resb,...)
+    attr(resb, "proj4string") <- proj4string
     return(resb)
 }
 
@@ -69,7 +71,10 @@ bindltraj <- function(ltraj, ...)
 {
     if (!inherits(ltraj, "ltraj"))
         stop("ltraj should be of class \"ltraj\"")
+    p4s <- attr(ltraj,"proj4string")
     traj <- .ltraj2traj(ltraj)
     traj$burst <- traj$id
-    return(.traj2ltraj(traj, ...))
+    re <- .traj2ltraj(traj, ...)
+    attr(re,"proj4string") <- p4s
+    return(re)
 }

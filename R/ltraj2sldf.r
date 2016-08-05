@@ -19,7 +19,7 @@
     } else {
         res <- lapply(1:length(lixy),
                       function(i) Lines(list(lixy[[i]]), ID=bu[i]))
-        res <- SpatialLines(res)
+        res <- SpatialLines(res, proj4string=.checkp4(ltr))
         df <- data.frame(id=id, burst=bu)
         row.names(df) <- bu
     }
@@ -28,4 +28,3 @@
     res <- SpatialLinesDataFrame(res, data=df)
     return(res)
   }
-

@@ -1,5 +1,5 @@
 "simm.mba" <- function(date=1:100, x0=c(0,0), mu=c(0,0), sigma=diag(2),
-                       id="A1", burst=id)
+                       id="A1", burst=id, proj4string=CRS())
   {
       if (!inherits(date, "POSIXct")) {
           class(date) <- c("POSIXct", "POSIXt")
@@ -26,7 +26,6 @@
 
     x <- c(x0[1], x0[1]+cumsum(W[-n,1]))
     y <- c(x0[2], x0[2]+cumsum(W[-n,2]))
-    res <- as.ltraj(data.frame(x,y),date, id, burst, typeII=TRUE)
+    res <- as.ltraj(data.frame(x,y),date, id, burst, typeII=TRUE, proj4string=proj4string)
     return(res)
   }
-

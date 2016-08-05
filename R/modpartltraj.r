@@ -97,6 +97,7 @@ partmod.ltraj <- function(tr, npart, mods, na.manage=c("prop.move","locf"))
         stop("tr should be of class \"ltraj\"")
     if (length(tr)>1)
         stop("only one trajectory can be passed")
+    p4s <- .checkp4(tr)
     if (!inherits(mods,"modpartltraj"))
         stop("mods should be of class modpartltraj")
     na.manage <- match.arg(na.manage)
@@ -135,7 +136,7 @@ partmod.ltraj <- function(tr, npart, mods, na.manage=c("prop.move","locf"))
             }
         }
         return(as.ltraj(xyt[,c("x","y")], xyt[,c("date")],
-                        id = id(tr), burst = i))
+                        id = id(tr), burst = i, proj4string=p4s))
     })
 
 
@@ -187,10 +188,10 @@ partmod.ltraj <- function(tr, npart, mods, na.manage=c("prop.move","locf"))
 
                 resltr[[i-1]] <- as.ltraj(gg[,c("x","y")], gg[,c("date")],
                                           id = id(tr),
-                                          burst = i-1)
+                                          burst = i-1, proj4string=p4s)
                 resltr[[i]] <- as.ltraj(gg2[,c("x","y")], gg2[,c("date")],
                                         id = id(tr),
-                                        burst = i)
+                                        burst = i, proj4string=p4s)
 
             }
         }

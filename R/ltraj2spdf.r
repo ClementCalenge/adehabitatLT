@@ -14,9 +14,8 @@
     xy <- tr[!is.na(tr$x),c("x","y")]
     tr <- tr[!is.na(tr$x),]
     tr$y <- tr$x <- NULL
-    res <- SpatialPointsDataFrame(xy, tr)
+    res <- SpatialPointsDataFrame(xy, tr, proj4string=.checkp4(ltr))
 
     ## Output
     return(res)
   }
-

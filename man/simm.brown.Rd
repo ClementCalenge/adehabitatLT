@@ -5,7 +5,8 @@
   This function simulates a Bivariate Brownian Motion. 
 }
 \usage{
-simm.brown(date = 1:100, x0 = c(0, 0), h = 1, id = "A1", burst = id)
+simm.brown(date = 1:100, x0 = c(0, 0), h = 1, id = "A1", burst = id,
+           proj4string=CRS())
 }
 \arguments{
   \item{date}{a vector indicating the date (in seconds) at which
@@ -19,6 +20,8 @@ simm.brown(date = 1:100, x0 = c(0, 0), h = 1, id = "A1", burst = id)
     animal (see \code{help(ltraj)})}
   \item{burst}{a character string indicating the identity of the simulated
     burst (see \code{help(ltraj)})}
+  \item{proj4string}{a valid CRS object containing the projection
+    information (see \code{?CRS} from the package \code{sp}).}
 }
 \details{
   A bivariate Brownian motion can be described by a vector

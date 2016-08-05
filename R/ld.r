@@ -11,7 +11,7 @@ ld <- function(ltraj)
     return(data.frame(tr, id=iidd, burst=bur))
 }
 
-dl <- function(x)
+dl <- function(x, proj4string=CRS())
 {
     if (!inherits(x, "data.frame"))
         stop("x should be of class data.frame")
@@ -43,5 +43,5 @@ dl <- function(x)
     } else {
         inf <- NULL
     }
-    as.ltraj(xy, dat, idd, bur, type2, infolocs=inf)
+    as.ltraj(xy, dat, idd, bur, type2, infolocs=inf, proj4string=proj4string)
 }

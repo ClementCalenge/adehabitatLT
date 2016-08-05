@@ -9,7 +9,7 @@
 simm.mou(date = 1:100, b = c(0, 0),
          a = diag(0.5, 2), x0 = b,
          sigma = diag(2), id = "A1",
-         burst = id)
+         burst = id, proj4string=CRS())
 }
 \arguments{
   \item{date}{a vector indicating the date (in seconds) at which
@@ -25,6 +25,8 @@ simm.mou(date = 1:100, b = c(0, 0),
     animal (see \code{help(ltraj)})}
   \item{burst}{a character string indicating the identity of the simulated
     burst (see \code{help(ltraj)})}
+  \item{proj4string}{a valid CRS object containing the projection
+    information (see \code{?CRS} from the package \code{sp}).}
 }
 \details{
   The Ornstein-Uhlenbeck process can be used to take into account an

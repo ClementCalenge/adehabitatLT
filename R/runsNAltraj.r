@@ -10,7 +10,7 @@
         if (sum(x)>2) {
             toto <- .C("runsltr", as.integer(x), as.integer(n), double(nrep+1),
                        as.integer(nrep), PACKAGE = "adehabitatLT")[[3]]
-            li <- as.randtest(toto[2:length(toto)], toto[1])
+            li <- as.randtest(toto[2:length(toto)], toto[1], alter="less")
             return(li)
         } else {
             return(NULL)
@@ -25,4 +25,3 @@
     }
     invisible(uu)
 }
-

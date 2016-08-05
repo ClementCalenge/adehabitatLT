@@ -5,7 +5,8 @@
   This function simulates a brownian bridge motion
 }
 \usage{
-simm.bb(date = 1:100, begin = c(0, 0), end = begin, id = "A1", burst = id)
+simm.bb(date = 1:100, begin = c(0, 0), end = begin, id = "A1",
+        burst = id, proj4string=CRS())
 }
 \arguments{
   \item{date}{a vector indicating the date (in seconds) at which
@@ -19,6 +20,8 @@ simm.bb(date = 1:100, begin = c(0, 0), end = begin, id = "A1", burst = id)
     animal (see \code{help(ltraj)})}
   \item{burst}{ a character string indicating the identity of the
     simulated animal (see \code{help(ltraj)})}
+  \item{proj4string}{a valid CRS object containing the projection
+    information (see \code{?CRS} from the package \code{sp}).}
 }
 \value{
   An object of class \code{ltraj}.
