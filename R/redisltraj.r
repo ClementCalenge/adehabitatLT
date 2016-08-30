@@ -45,7 +45,7 @@ redisltraj <- function (l, u, burst = NULL, samplex0 = FALSE, addbit = FALSE,
             x <- toto[[4]][1:neff]
             y <- toto[[5]][1:neff]
             dat <- toto[[8]][1:neff]
-            class(dat) <- c("POSIXt", "POSIXct")
+            class(dat) <- c("POSIXct", "POSIXt")
             attr(dat, "tzone") <- attr(l[[1]]$date, "tzone")
 
             if (addbit) {
@@ -65,7 +65,7 @@ redisltraj <- function (l, u, burst = NULL, samplex0 = FALSE, addbit = FALSE,
                                                                     "burst"), ".R", u, sep = ""),
                                proj4string=p4s)
             }
-            nl[[1]]$rel.ang[is.na(nl[[1]]$rel.ang)] <- 0
+            nl[[1]]$rel.angle[is.na(nl[[1]]$rel.angle)] <- 0
             class(nl) <- "ltraj"
             options(opt)
             return(nl)
