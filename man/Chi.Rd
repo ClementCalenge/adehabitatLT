@@ -39,8 +39,8 @@ rchi(n, df = 2)
   variable distributed according to a chi-square distribution.
 }
 \value{
-  \code{dchi} gives the density, \code{pchisq} gives the distribution
-  function, \code{qchisq} gives the quantile function, and \code{rchisq}
+  \code{dchi} gives the density, \code{pchi} gives the distribution
+  function, \code{qchi} gives the quantile function, and \code{rchi}
   generates random deviates.
 }
 \references{
