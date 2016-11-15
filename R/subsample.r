@@ -22,7 +22,7 @@ subsample <- function(ltraj, dt, nlo=1,
         vec <- rep(1:la, length=nrow(x))
         x <- x[vec==nlo[i],]
         if (!is.null(infol)) {
-            infol <- infol[vec==nlo[i],]
+            infol <- infol[vec==nlo[i],,drop=FALSE]
             attr(x, "infolocs") <- infol
         }
         return(x)
