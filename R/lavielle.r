@@ -77,7 +77,7 @@ findpath <- function(lav, K, plotit=TRUE)
     ## Find path
     if (attr(lav, "typeseg") == "default") {
         series <- lav$series
-        pat <- .Call("findpath", lav$matpath, K, as.integer(lav$Kmax), PACKAGE="adehabitatLT")
+        pat <- .Call("findpathc", lav$matpath, K, as.integer(lav$Kmax), PACKAGE="adehabitatLT")
         ## conversion according to the subsampling grid ld:
         pat <- (pat*lav$ld) - lav$ld + 1
         if (plotit) {

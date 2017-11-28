@@ -3904,7 +3904,7 @@ SEXP dynprog(SEXP mat, SEXP Kmaxr)
 
 
 
-SEXP findpath(SEXP matr, SEXP Kr, SEXP Kmax)
+SEXP findpathc(SEXP matr, SEXP Kr, SEXP Kmax)
 {
     SEXP so, Kc, matc;
     int K, i, *sor, n2, n, *mat, Km;
