@@ -54,10 +54,24 @@ id <- function(ltraj)
         stop("ltraj should be of class ltraj")
     if (length(value)!=length(ltraj))
         stop("the assignment should be a list of the same length as ltraj")
-    toto <- apply(do.call(rbind,lapply(value, names)),2,function(x) all(x==x[1]))
-    if (!toto) {
-        stop("the names of the variables in infolocs differ between bursts")
+    if (length(value)>1) {
+        toto <- apply(do.call(rbind,lapply(value, names)),2,function(x) all(x==x[1]))
+        if (!toto) {
+            stop("the names of the variables in infolocs differ between bursts")
+        }
+        toto <- apply(do.call(rbind,lapply(value, ncol)),2,function(x) all(x==x[1]))
+        if (!toto) {
+            stop("the number of variables in infolocs differ between bursts")
+        }
+        toto <- lapply(value, function(x) lapply(x, class))
+        tutu <- all(sapply(1:length(toto[[1]]),
+                           function(i) all(sapply(2:length(toto),
+                                                  function(j) all(toto[[j]][[i]]==toto[[1]][[i]])))))
+        if (!tutu) {
+            stop("The class of the variables in the data.frames differ between bursts")
+        }
     }
+
     for (i in (1:length(ltraj))) {
         df <- value[[i]]
         if (!inherits(df, "data.frame"))
