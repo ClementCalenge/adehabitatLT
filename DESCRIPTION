@@ -1,6 +1,6 @@
 Package: adehabitatLT
-Version: 0.3.22
-Date: 2017-11-28
+Version: 0.3.23
+Date: 2017-01-28
 Depends: R (>= 2.10.0), sp, methods, ade4, adehabitatMA, CircStats, stats
 Suggests: maptools, tkrplot, MASS
 Imports: graphics, grDevices, utils
