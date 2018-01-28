@@ -111,13 +111,12 @@ indmove.detail(x, detail=c("dx","dy"), nrep=999,
 }
 \seealso{\code{\link{ltraj}}}
 \examples{
-
+\dontrun{
 ## theoretical independence between
 br <- simm.brown(1:1000)
 testang.ltraj(br)
 testdist.ltraj(br)
 
-\dontrun{
 indmove(br)
 }
 
