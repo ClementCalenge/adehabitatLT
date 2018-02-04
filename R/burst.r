@@ -55,11 +55,11 @@ id <- function(ltraj)
     if (length(value)!=length(ltraj))
         stop("the assignment should be a list of the same length as ltraj")
     if (length(value)>1) {
-        toto <- apply(do.call(rbind,lapply(value, names)),2,function(x) all(x==x[1]))
+        toto <- all(apply(do.call(rbind,lapply(value, names)),2,function(x) all(x==x[1])))
         if (!toto) {
             stop("the names of the variables in infolocs differ between bursts")
         }
-        toto <- apply(do.call(rbind,lapply(value, ncol)),2,function(x) all(x==x[1]))
+        toto <- all(apply(do.call(rbind,lapply(value, ncol)),2,function(x) all(x==x[1])))
         if (!toto) {
             stop("the number of variables in infolocs differ between bursts")
         }
