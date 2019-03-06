@@ -58,6 +58,8 @@ simm.mou(date = 1:100, b = c(0, 0),
 \seealso{\code{\link{simm.brown}}, \code{\link{ltraj}},
   \code{\link{simm.crw}}, \code{\link{simm.mba}} }
 \examples{
+
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(253)
 u <- simm.mou(1:50, burst="Start at the attraction point")
 v <- simm.mou(1:50, x0=c(-3,3),

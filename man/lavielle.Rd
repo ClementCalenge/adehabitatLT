@@ -157,6 +157,7 @@ findpath(lav, K, plotit = TRUE)
 ##
 ## A simulated series
 
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(129)
 seri <- c(rnorm(100), rnorm(100, mean=2),
           rnorm(100), rnorm(100, mean=-3),
@@ -186,6 +187,7 @@ firstseg <- seri[fp[[seg]][1]:fp[[seg]][2]]
 ## Now, changes of variance
 
 ## A simulated series
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(129)
 seri <- c(rnorm(100), rnorm(100, sd=2),
           rnorm(100), rnorm(100, sd=3),

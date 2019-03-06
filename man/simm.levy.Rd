@@ -49,6 +49,7 @@ simm.levy(date = 1:500, mu = 2, l0 = 1, x0 = c(0, 0),
   \code{\link{simm.levy}}}
 \examples{
 
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(411)
 w <- simm.levy(1:500, mu = 1.5, burst = "mu = 1.5")
 u <- simm.levy(1:500, mu = 2, burst = "mu = 2")

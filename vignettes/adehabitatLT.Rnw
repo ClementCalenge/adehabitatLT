@@ -18,7 +18,7 @@ the {\tt adehabitatLT} Package }
   Office national de la chasse et de la faune
   sauvage\\
   Saint Benoist -- 78610 Auffargis -- France.}
-\date{July 2016}
+\date{March 2019}
 
 \begin{document}
 
@@ -107,6 +107,7 @@ library(adehabitatLT)
 @
 
 <<echo=FALSE,print=FALSE>>=
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(13431)
 @
 
@@ -1849,6 +1850,7 @@ distribution with a mean varying from one segment to the next (0, 2,
 0, -3, 0, 2):
 
 <<label=figseri1,echo=FALSE,fig=FALSE,eval=FALSE>>=
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(129)
 seri <- c(rnorm(100), rnorm(100, mean=2),
           rnorm(100), rnorm(100, mean=-3),
@@ -2395,6 +2397,7 @@ map. We only define 9 repetitions of the null model. Now, we simulate
 the model using the function \texttt{testNM}:
 
 <<label=figtestNM,echo=FALSE,fig=FALSE,eval=FALSE>>=
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(90909)
 par(mfrow=c(3,3), mar=c(0,0,0,0))
 resu <- testNM(nmo, count = FALSE)
@@ -2460,6 +2463,7 @@ Now, if we simulate the null model, only those data sets satisfying the
 constraint will be returned by the function:
 
 <<label=figtestnm2,echo=FALSE,fig=FALSE,eval=FALSE>>=
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(90909)
 par(mfrow=c(3,3), mar=c(0,0,0,0))
 resu <- testNM(nmo2, count = FALSE)

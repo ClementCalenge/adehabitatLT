@@ -64,6 +64,7 @@ simm.crw(date=1:100, h = 1, r = 0,
   \code{\link{simm.crw}}, \code{\link{simm.mba}}}
 \examples{
 
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(876)
 u <- simm.crw(1:500, r = 0.99, burst = "r = 0.99")
 v <- simm.crw(1:500, r = 0.9, burst = "r = 0.9", h = 2)

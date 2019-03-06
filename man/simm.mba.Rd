@@ -58,6 +58,7 @@ model wildlife motion. \emph{Bulletin of the Brazilian Mathematical
   \code{\link{simm.crw}}, \code{\link{simm.mou}} }
 \examples{
 
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(253)
 u <- simm.mba(1:1000, sigma = diag(c(4,4)), 
               burst = "Brownian motion")

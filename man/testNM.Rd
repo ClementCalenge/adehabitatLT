@@ -398,6 +398,7 @@ mo2 <- NMs.randomCRW(na.omit(anim1), rangles=TRUE, rdist=TRUE,
                      constraint.par = map, nrep=499)
 
 ## Then apply the null model
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(298) ## to make the calculation reproducible
 rand <- testNM(mo2)
 
@@ -460,6 +461,7 @@ mo2s <- NMs.randomCRW(na.omit(puechcirc), constraint.func=consfun,
 mo2m <- NMs2NMm(mo2s, treatment.func = myfunm, nrep=499)
 
 ## and we fit the model
+suppressWarnings(RNGversion("3.5.0"))
 set.seed(908)
 resu <- testNM(mo2m)
 
