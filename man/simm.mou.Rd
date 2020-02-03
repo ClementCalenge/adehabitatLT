@@ -50,7 +50,7 @@ simm.mou(date = 1:100, b = c(0, 0),
   Dunn, J.E., & Gipson, P.S. (1977) Analysis of radio telemetry data in
   studies of home range. \emph{Biometrics} \bold{33}: 85--101. 
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}\cr
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}\cr
   Stephane Dray \email{dray@biomserv.univ-lyon1.fr}\cr
   Manuela Royer \email{royer@biomserv.univ-lyon1.fr}\cr
   Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

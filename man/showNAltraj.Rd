@@ -55,7 +55,7 @@ plotNAltraj(x, \dots)
   calculation of the P-value (the test actually presented the value
   1-P). This bug is now corrected.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{\code{\link{ltraj}} for additional information about objects of
   class \code{ltraj}, \code{\link{setNA}} for additional information
   about missing values in such objects}

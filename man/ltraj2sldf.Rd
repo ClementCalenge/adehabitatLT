@@ -22,7 +22,7 @@ ltraj2sldf(ltr, byid = FALSE)
     \code{Lines} correspond to one animal.  if \code{FALSE},
     one object of class \code{Lines} correspond to one burst.}
 }
-\author{ Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{ Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{ \code{\link{ltraj}} for objects of class
   \code{ltraj}.}
 \examples{

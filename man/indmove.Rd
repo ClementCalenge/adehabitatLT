@@ -106,7 +106,7 @@ indmove.detail(x, detail=c("dx","dy"), nrep=999,
   successive difference to the variance. \emph{The Annals of
     Mathematical Statistics}, \bold{12}: 367--395.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}\cr
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}\cr
   Stephane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{ltraj}}}

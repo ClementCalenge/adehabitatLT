@@ -49,7 +49,7 @@ B.S. (2002) Employing stochastic differential equations to
 model wildlife motion. \emph{Bulletin of the Brazilian Mathematical
   Society} \bold{33}: 385--408.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}\cr
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}\cr
   Stephane Dray \email{dray@biomserv.univ-lyon1.fr}\cr
   Manuela Royer \email{royer@biomserv.univ-lyon1.fr}\cr
   Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

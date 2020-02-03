@@ -51,7 +51,7 @@ simm.crw(date=1:100, h = 1, r = 0,
   Kareiva, P. M. & Shigesada, N. (1983) Analysing insect movement as a
   correlated random walk. \emph{Oecologia}, \bold{56}: 234--238.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}\cr
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}\cr
   Stephane Dray \email{dray@biomserv.univ-lyon1.fr}\cr
   Manuela Royer \email{royer@biomserv.univ-lyon1.fr}\cr
   Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

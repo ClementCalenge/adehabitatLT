@@ -48,7 +48,7 @@ removeinfo(ltraj)
   the value of \code{burst(x) <- value} is that of the assignment,
   \code{value}, not the return value from the left-hand side.)
 }
-\author{ Clement Calenge \email{clement.calenge@oncfs.gouv.fr} }
+\author{ Clement Calenge \email{clement.calenge@ofb.gouv.fr} }
 \seealso{\code{\link{ltraj}}, \code{\link{names}}}
 \examples{
 data(puechcirc)

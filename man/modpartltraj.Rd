@@ -183,7 +183,7 @@ partmod.ltraj(tr, npart, mods, na.manage = c("prop.move","locf"))
   Gueguen, L. (2009) Computing the likelihood of sequence segmentation
   under Markov modelling. Arxiv preprint arXiv:0911.3070.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{\code{\link{ltraj}}}
 \examples{
 

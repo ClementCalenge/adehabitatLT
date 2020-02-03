@@ -25,7 +25,7 @@ rasterize.ltraj(ltr, map)
   indicated. 
 }
 \author{
-  Clement Calenge \email{clement.calenge@oncfs.gouv.fr}
+  Clement Calenge \email{clement.calenge@ofb.gouv.fr}
 }
 \seealso{
   \code{\link{as.ltraj}} for additional information about objects of

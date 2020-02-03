@@ -75,7 +75,7 @@ meanfpt(f, graph = TRUE)
   analysis of area restricted search and habitat selection. \emph{Ecology}
   \bold{84}: 282--288. 
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{\code{\link{ltraj}} for additional information on objects of
   class \code{ltraj}}
 \examples{

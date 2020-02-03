@@ -27,7 +27,7 @@ simm.bb(date = 1:100, begin = c(0, 0), end = begin, id = "A1",
   An object of class \code{ltraj}.
 }
 \author{
-  Clement Calenge \email{clement.calenge@oncfs.gouv.fr}\cr
+  Clement Calenge \email{clement.calenge@ofb.gouv.fr}\cr
   Stephane Dray \email{dray@biomserv.univ-lyon1.fr}\cr
   Manuela Royer \email{royer@biomserv.univ-lyon1.fr}\cr
   Daniel Chessel \email{chessel@biomserv.univ-lyon1.fr}

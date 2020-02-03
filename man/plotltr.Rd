@@ -23,7 +23,7 @@ plotltr(x, which = "dist", pch = 16, cex = 0.7, addlines = TRUE,
   \item{\dots}{additional parameters to be passed to the generic
     function \code{plot}}
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{ \code{\link{ltraj}} for additional information about
   objects of class \code{ltraj}, and \code{\link{sliwinltr}} for a
   sliding window smoothing}

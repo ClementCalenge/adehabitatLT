@@ -149,7 +149,7 @@ findpath(lav, K, plotit = TRUE)
   problem. Report number 5339, Institut national de recherche en
   informatique et en automatique.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}.  The code
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}.  The code
   is a C translation based on the Matlab code of M. Lavielle}
 \examples{
 

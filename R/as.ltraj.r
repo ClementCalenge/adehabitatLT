@@ -199,6 +199,29 @@ as.ltraj <- function(xy, date=NULL, id, burst=id, typeII = TRUE,
 }
 
 
+
+.checkp4obj <- function(...)
+{
+    uu <- list(...)
+    if (!all(unlist(lapply(uu, function(x) inherits(x,"ltraj")))))
+        stop("all objects should be of class \"ltraj\"")
+    pf <- lapply(uu, function(x) {
+                     at <- attr(x, "proj4string")
+                     if (is.null(at))
+                         return(CRS())
+                     if (!inherits(at, "CRS"))
+                         stop("proj4string should inherit CRS")
+                     return(at)
+                 })
+    atz <- all(sapply(1:length(pf), function(i) identical(pf[[i]],pf[[1]])))
+    if (!atz)
+        stop("multiple projections not allowed in objects of class ltraj")
+    aa <- new("Spatial")
+    proj4string(aa) <- pf[[1]]
+    return(aa)
+}
+
+
 .traj2ltraj <- function(traj,slsp =  c("remove", "missing"))
 {
     if (!inherits(traj, "traj"))

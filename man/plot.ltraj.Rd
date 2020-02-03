@@ -40,7 +40,7 @@
   \item{\dots}{arguments to be passed to the generic
     function \code{plot} }
 }
-\author{  Clement Calenge \email{clement.calenge@oncfs.gouv.fr} }
+\author{  Clement Calenge \email{clement.calenge@ofb.gouv.fr} }
 \seealso{For further information on the class \code{ltraj},
   \code{\link{ltraj}}. }
 \examples{

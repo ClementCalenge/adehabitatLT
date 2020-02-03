@@ -49,7 +49,7 @@ sliwinltr(ltraj, fun, step, type = c("locs", "time"),
   relocation.  Each component is a data frame containing the time and
   the corresponding smoothed values for each date.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{\code{\link{ltraj}} for additional information about objects
       of class \code{ltraj}}
 \examples{

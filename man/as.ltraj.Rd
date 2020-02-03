@@ -218,7 +218,7 @@ rec(x, slsp = c("remove", "missing"))
   Informatics}, \bold{4}: 34--41.
 }
 \author{
-  Clement Calenge \email{clement.calenge@oncfs.gouv.fr}\cr
+  Clement Calenge \email{clement.calenge@ofb.gouv.fr}\cr
   Stephane Dray \email{dray@biomserv.univ-lyon1.fr}
 }
 \seealso{\code{\link{is.regular}} and \code{\link{sett0}} for additional

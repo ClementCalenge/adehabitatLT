@@ -14,7 +14,7 @@ is.regular(ltraj)
 \value{
   \code{is.regular} returns a logical value
 }
-\author{ Clement Calenge \email{clement.calenge@oncfs.gouv.fr} }
+\author{ Clement Calenge \email{clement.calenge@ofb.gouv.fr} }
 \seealso{\code{\link{ltraj}}}
 \examples{
 data(capreotf)

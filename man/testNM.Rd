@@ -272,7 +272,7 @@ testNM(NM, count = TRUE)
   populations of large herbivores: a null model
   approach. \emph{Ecography}, in press.
 }
-\author{ Clement Calenge \email{clement.calenge@oncfs.gouv.fr} }
+\author{ Clement Calenge \email{clement.calenge@ofb.gouv.fr} }
 \seealso{
   \code{\link{as.ltraj}} for additional information about objects of
   class \code{"ltraj"}

@@ -15,7 +15,7 @@ hbrown(x)
   a vector with one estimate per burst of the object of class
   \code{ltraj}.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{\code{\link{simm.brown}}}
 \examples{
 toto <- simm.brown(1:200, h=4)

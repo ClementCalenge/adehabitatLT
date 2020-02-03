@@ -42,7 +42,7 @@ simm.levy(date = 1:500, mu = 2, l0 = 1, x0 = c(0, 0),
   Animal search strategies: a quantitative random-walk
   analysis. \emph{Ecology}, \bold{86}: 3078--3087.
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{\code{\link{chi}}, \code{\link[CircStats]{rwrpnorm}},
   \code{\link{simm.brown}}, \code{\link{ltraj}},
   \code{\link{simm.crw}}, \code{\link{simm.mba}},

@@ -32,7 +32,7 @@
 \value{
   An object of class \code{ltraj}.
 }
-\author{ Clement Calenge \email{clement.calenge@oncfs.gouv.fr} }
+\author{ Clement Calenge \email{clement.calenge@ofb.gouv.fr} }
 \seealso{ \code{\link{ltraj}}, \code{\link{gdltraj}} }
 \examples{
   data(puechcirc)

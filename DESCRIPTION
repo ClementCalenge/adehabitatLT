@@ -1,11 +1,11 @@
 Package: adehabitatLT
-Version: 0.3.24
-Date: 2019-04-07
+Version: 0.3.25
+Date: 2020-01-11
 Depends: R (>= 2.10.0), sp, methods, ade4, adehabitatMA, CircStats, stats
 Suggests: maptools, tkrplot, MASS
 Imports: graphics, grDevices, utils
 Title: Analysis of Animal Movements
 Author: Clement Calenge, contributions from Stephane Dray and Manuela Royer
-Maintainer: Clement Calenge <clement.calenge@oncfs.gouv.fr>
+Maintainer: Clement Calenge <clement.calenge@ofb.gouv.fr>
 Description: A collection of tools for the analysis of animal movements.
 License: GPL (>= 2)

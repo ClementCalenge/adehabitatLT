@@ -63,7 +63,7 @@ setNA(ltraj, date.ref, dt, tol = dt/10,
 \value{
   An object of class \code{ltraj}
 }
-\author{ Clement Calenge \email{clement.calenge@oncfs.gouv.fr} }
+\author{ Clement Calenge \email{clement.calenge@ofb.gouv.fr} }
 \seealso{\code{\link{ltraj}} for additional information about objects
 of class \code{ltraj}. \code{\link{sett0}} (especially the examples
 of this help page) and \code{\link{is.regular}} for additional

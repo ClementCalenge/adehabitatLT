@@ -72,7 +72,7 @@ residenceTime(lt, radius, maxt, addinfo = FALSE,
   heterogeneous landscapes: identifying profitable places and
   homogeneous movement bouts. \emph{Ecology}, \bold{89}, 3336--3348. 
 }
-\author{Clement Calenge \email{clement.calenge@oncfs.gouv.fr}}
+\author{Clement Calenge \email{clement.calenge@ofb.gouv.fr}}
 \seealso{
   \code{\link{lavielle}} for the partitionning of the trajectory based
   on the residence time.
