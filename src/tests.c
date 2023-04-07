@@ -902,7 +902,7 @@ void prodmatAAtB (double **a, double **b)
 void prodmatAtBrandomC (double **a, double **b, double **c, int*permut)
 /*--------------------------------------------------
  * Produit matriciel AtB
- * les lignes de B sont permutÚes par la permutation permut
+ * les lignes de B sont permutees par la permutation permut
  --------------------------------------------------*/
 {
     int j, k, i, i0, lig, col, col2;
@@ -3044,7 +3044,7 @@ SEXP fillsegments(SEXP df, SEXP Tmaxr, SEXP taur, SEXP hminr, SEXP D, SEXP Lminr
 }
 
 
-/* On calcule maintenant, sur la base d'une grille passée, l'estimation kernel */
+/* On calcule maintenant, sur la base d'une grille passee, l'estimation kernel */
 SEXP mkde(SEXP xyh, SEXP grid)
 {
     
@@ -3271,7 +3271,7 @@ SEXP CalculD(SEXP tra, SEXP Tmaxr, SEXP Lmin, SEXP PA)
 
 
 
-/* Composantes d'un trajet. Rastérisation d'un pas */
+/* Composantes d'un trajet. Rasterisation d'un pas */
 SEXP RasterPas(SEXP df, SEXP xllr, SEXP yllr, SEXP cs, SEXP type1)
 {
     int npas, i, j, nso, k;
@@ -3305,7 +3305,7 @@ SEXP RasterPas(SEXP df, SEXP xllr, SEXP yllr, SEXP cs, SEXP type1)
 	y1 = REAL(yl)[i];
 	y2 = REAL(yl)[i+1];
 	
-	/* identification des coordonnées initiales et finales */	
+	/* identification des coordonnees initiales et finales */	
 	dist = hypot(x2-x1, y2-y1);
 	k = (int) round(50.0*dist/csi);
 	if (k == 0)
