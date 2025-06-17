@@ -1,6 +1,6 @@
 useDynLib(adehabitatLT, .registration=TRUE)
 
-import(adehabitatMA,ade4,sp,methods,CircStats,stats)
+import(adehabitatMA,ade4,sp,methods,stats)
 importFrom("graphics", "abline", "box", "hist", "image", "lines", "par", "points", "polygon", "title")
 importFrom("grDevices", "getGraphicsEvent", "gray", "grey", "n2mfrow")
 importFrom("utils", "select.list")

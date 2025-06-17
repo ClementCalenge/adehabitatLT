@@ -1,7 +1,7 @@
 Package: adehabitatLT
-Version: 0.3.28
-Date: 2024-09-05
-Depends: R (>= 2.10.0), sp, methods, ade4, adehabitatMA, CircStats, stats
+Version: 0.3.29
+Date: 2025-06-17
+Depends: R (>= 2.10.0), sp, methods, ade4, adehabitatMA, stats
 Suggests: tkrplot, MASS
 Imports: graphics, grDevices, utils
 Title: Analysis of Animal Movements

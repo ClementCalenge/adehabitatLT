@@ -8,12 +8,24 @@
             attr(date, "tzone") <- ""
         }
     }
+    if (r < 0 | r > 1)
+        stop("rho must be between 0 and 1")
+
     n <- length(date)
     dt <- c(diff(unclass(date)))
     if (all(dt-dt[1]>1e-7))
         stop("the time lag between relocations should be constant")
 
-    ang<-rwrpnorm(n-2,0,r)
+    if (r==0) {
+        ang <- runif(n-2,0,2*pi)
+    } else if (r==1) {
+        ang <- rep(0, n-2)
+    } else {
+        sd <- sqrt(-2*log(r))
+        ang<-rnorm(n-2,0,sd)%%(2*pi)
+    }
+
+
     if (h>0) {
         v=sqrt(dt)*rchi(n-1) * h
     } else {
